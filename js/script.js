@@ -7,6 +7,8 @@ async function getFlag() {
   if (country === "") {
     alert("You must type a country name.");
   } else {
+    container.innerHTML = "";
+
     const response = await fetch(
       `https://restcountries.com/v2/name/${country}`
     );
